@@ -312,13 +312,13 @@ html {
 
 .service {
     background: #07080B;
-    padding: 30px;
-    border-radius: 10px;
+    padding: 5%;
+    border-radius: 1em;
     position: absolute;
     bottom: 0;
     z-index: 1;
     transform: scale(1.05);
-    box-shadow: 0 0 20px -15px #07080B;
+    box-shadow: 0 0 5% -3% #07080B;
     transition: transform 0.8s;
 }
 
