@@ -80,7 +80,6 @@ html {
 }
 
     #hireButton.disabled::after {
-        content: "Not taking more projects right now";
         position: absolute;
         top: 100%;
         left: 0;
@@ -108,7 +107,8 @@ html {
     color: #DFFF00;
     padding: 10px; /* Add padding to create space around the text */
     overflow: hidden; /* Hide overflow content */
-    width:350px;
+    width:380px;
+    font-size:25px;
 }
 
 .title::before {
