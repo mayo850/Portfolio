@@ -75,3 +75,58 @@ document.onmousemove = function () {
         eye.style.transform = 'translate(-' + x + ', -' + y + ')';
     });
 };
+
+
+document.getElementById("hireButton").addEventListener("click", function (event) {
+    if (this.classList.contains("disabled")) {
+        event.preventDefault();
+    }
+});
+
+
+document.getElementById("hireButton").addEventListener("click", function (event) {
+    if (this.classList.contains("disabled")) {
+        event.preventDefault();
+        var disabledTextContainer = document.querySelector(".disabled-text-container");
+
+        if (!disabledTextContainer.querySelector(".disabled-text")) {
+            disabledTextContainer.innerHTML = '<p class="disabled-text"></p>';
+
+            // Start typing animation
+            var typed = new Typed('.disabled-text', {
+                strings: ['Apologies, but I am currently not accepting any new projects for the time being as I am engaged in research work.'],
+                typeSpeed: 50,
+                showCursor: false,
+                onComplete: function (self) {
+                    // After typing animation, start fading out after 5 seconds
+                    setTimeout(function () {
+                        fadeOutText(disabledTextContainer.querySelector('.disabled-text'));
+                    }, 5000);
+                }
+            });
+
+            // Show the disabled text container
+            disabledTextContainer.style.opacity = '1';
+            disabledTextContainer.style.visibility = 'visible';
+        }
+    }
+});
+
+function fadeOutText(element) {
+    var text = element.textContent;
+    var duration = text.length * 50; // Duration in milliseconds based on typing speed
+    var fadeOutInterval = 10; // Interval in milliseconds between opacity changes
+    var opacityStep = 1 / (duration / fadeOutInterval);
+    var currentOpacity = 1;
+
+    var interval = setInterval(function () {
+        if (currentOpacity <= 0) {
+            clearInterval(interval);
+            element.remove();
+        } else {
+            element.style.opacity = currentOpacity;
+            currentOpacity -= opacityStep;
+        }
+    }, fadeOutInterval);
+}
+

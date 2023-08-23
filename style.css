@@ -74,6 +74,43 @@ html {
         background: none;
     }
 
+#hireButton.disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+}
+
+    #hireButton.disabled::after {
+        content: "Not taking more projects right now";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #95a5a6;
+        color: #fff;
+        padding: 5px;
+        font-size: 12px;
+        text-align: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    #hireButton.disabled:hover::after {
+        opacity: 1;
+        visibility: visible;
+    }
+
+.disabled-text-container {
+    position: relative;
+    margin-top: 20px;
+    opacity: 0;
+    visibility: hidden;
+    color: #DFFF00;
+    padding: 10px; /* Add padding to create space around the text */
+    overflow: hidden; /* Hide overflow content */
+    width:350px;
+}
+
 .title::before {
     content: '';
     background: #07080B;
@@ -1237,6 +1274,19 @@ section {
             margin: 5px 0;
             font-weight: 700;
         }
+
+    .showcase-content {
+        flex-direction: column; /* Change the layout to column on smaller screens */
+    }
+
+    .showcase-text {
+        order: 2; /* Change the order to push the text below the image */
+        margin-top: 20px; /* Add margin to create space between image and text */
+    }
+
+    .showcase-img {
+        order: 1; /* Change the order to move the image above the text */
+    }
 
     .btn-md {
         display: inline-block;
