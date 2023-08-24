@@ -641,6 +641,22 @@ html {
     transition: all 0.3s ease;
 }
 
+/* Default link color */
+.publication-link {
+    color: blue;
+    text-decoration: none;
+}
+
+    /* Link color on hover */
+    .publication-link:hover {
+        color: red;
+    }
+
+    /* Link color after click */
+    .publication-link:visited {
+        color: #DFFF00;
+    }
+
 
 /* Contact Me Section */
 
