@@ -130,3 +130,23 @@ function fadeOutText(element) {
     }, fadeOutInterval);
 }
 
+// Function to toggle visibility of elements based on screen width
+function toggleElements() {
+    const screenWidth = window.innerWidth;
+    const mobileDiv = document.querySelector('.certification-container.mobile');
+    const desktopTable = document.querySelector('.table.desktop');
+
+    if (screenWidth <= 768) {
+        desktopTable.style.display = 'none'; // Hide desktop table in mobile view
+        mobileDiv.style.display = 'flex'; // Show mobile div in mobile view
+    } else {
+        desktopTable.style.display = 'block'; // Show desktop table in desktop view
+        mobileDiv.style.display = 'none'; // Hide mobile div in desktop view
+    }
+}
+
+// Initial call to set the initial visibility based on screen width
+toggleElements();
+
+// Attach the toggleElements function to the window's resize event to handle dynamic resizing
+window.addEventListener('resize', toggleElements);

@@ -307,17 +307,15 @@ html {
 }
 
     .about .about-content .left {
-        width: 55%;
+        width: 50%;
         padding: 0 20px;
         overflow: hidden;
+        /* Center the content */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
-
-        .about .about-content .left img {
-            height: 450px;
-            width: 450px;
-            object-fit: cover;
-            border-radius: 50%;
-        }
 
     .about .about-content .right {
         width: 45%;
@@ -347,6 +345,45 @@ html {
             .about .about-content .right .table td {
                 padding: 10px;
             }
+
+.certification-container {
+    width: 100%; /* Set the desired width of the container */
+    height: 400px; /* Automatically adjust the height based on the content */
+    overflow: hidden; /* Hide any overflow content */
+}
+
+/* Make the SVG element responsive */
+.certifications {
+    height: 300px;
+}
+
+.mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes glow {
+    0% {
+        filter: drop-shadow(0 0 5px rgba(0, 0, 255, 0.7));
+        opacity: 1;
+    }
+
+    50% {
+        filter: drop-shadow(0 0 20px rgba(0, 0, 255, 0.7));
+        opacity: 0.8;
+    }
+
+    100% {
+        filter: drop-shadow(0 0 5px rgba(0, 0, 255, 0.7));
+        opacity: 1;
+    }
+}
+
+.certifications.glowing {
+    animation: glow 1s infinite;
+}
+
 
 /* Services section styling */
 
@@ -886,7 +923,7 @@ section {
 
     .showcase-img img {
         position: absolute;
-        top: 85%;
+        top: 70%;
         left: 50%;
         transform: translate(-50%, -50%);
         width: 55%;

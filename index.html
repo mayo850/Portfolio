@@ -14,6 +14,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body id="home">
+    <!--<div class="load-wrapper">
+        <img src="images/Loader.gif" alt="Loading..." />
+    </div>-->
+
     <!-- Scroll Up Button -->
     <div class="scroll-up-btn">
         <i class="bx bx-up-arrow-alt bx-sm"></i>
@@ -78,7 +82,11 @@
             <h5 class="title text-center m-heading text-secondary">ABOUT ME</h5>
             <div class="about-content">
                 <div class="column left">
-                    <img src="./images/mayo.jpeg">
+                    <div class="certification-container">
+                        <svg class="certifications glowing" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="/images/brands.svg#azure-fundamentals"></use>
+                        </svg>
+                    </div>
                 </div>
                 <div class="column right">
                     <div class="text">I'm Izan and I'm a <span class="typing-2"></span></div>
@@ -87,7 +95,7 @@
 
                         In my current role, I work on developing and testing new applications while continually striving to improve myself and enhance my abilities. Whether it's through attending workshops, taking courses, or seeking out new challenges, I am always eager to learn and grow as a professional.
                     </p>
-                    <table class="table">
+                    <table class="table desktop">
                         <tr>
                             <td>Birthday</td>
                             <td>: August, 1999</td>
@@ -113,6 +121,11 @@
                             <td>: Not Available</td>
                         </tr>
                     </table>
+                    <div class="certification-container mobile">
+                        <svg class="certifications glowing" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="/images/brands.svg#azure-fundamentals"></use>
+                        </svg>
+                    </div>
                 </div>
             </div>
         </div>
@@ -357,5 +370,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="app.js"></script>
+    <!--<script>
+        $(window).on("load", function () {
+            $("loader-wrapper").fadeOut("slow");
+        });
+    </script>-->
 </body>
 </html>
