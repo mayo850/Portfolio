@@ -11,12 +11,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-aQcSPSdABPFvK/6Q7TkIW0uMYwn5KsFXTZg0tBwN1qo4KZW5dB2+yYqMsY8yIOW+1" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
+
 </head>
+
 <body id="home">
-    <!--<div class="load-wrapper">
-        <img src="images/Loader.gif" alt="Loading..." />
-    </div>-->
 
     <!-- Scroll Up Button -->
     <div class="scroll-up-btn">
@@ -24,52 +23,35 @@
     </div>
 
     <div class="showcase">
-        <header>
-            <nav class="navbar">
-                <h1 class="logo"><span class="text-secondary"><i class="bx bxl-c-plus-plus bx-md"></i></span>omputer Science</h1>
+        <canvas id="backgroundShow"></canvas>
+        <div class="content">
+            <header>
+                <nav class="navbar">
+                    <h1 class="logo"><span class="text-secondary"><i class="bx bxl-c-plus-plus bx-md"></i></span>omputer Science</h1>
 
-                <ul class="menu hide">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#teams">Publications</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a><span class="text-secondary"><i class="bx bxs-phone bx-xs"></i></span>+1 (309) 317-5552</a></li>
-                </ul>
-                <!-- <div class="menu-btn">
-                    <i class="bx bx-menu bx-md"></i>
-                </div> -->
-            </nav>
+                    <ul class="menu hide">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#teams">Publications</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a><span class="text-secondary"><i class="bx bxs-phone bx-xs"></i></span>+1 (309) 317-5552</a></li>
+                    </ul>
+                </nav>
+            </header>
 
-            <!--<div id="hamburger-icon">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
-
-                <ul class="mobile-menu">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#teams">Teams</a></li>
-                    <li><a href="#contacts">Contacts</a></li>
-                </ul>
-
-            </div>-->
-
-        </header>
-
-        <div class="showcase-content">
-            <div class="showcase-text">
-                <div class="text-1">Hello, my name is</div>
-                <div class="text-2">Izan Khan</div>
-                <div class="text-3">And I'm a <span class="typing-1"></span></div>
-                <a id="hireButton" href="documents/Izan_Khan_Resume_R1 .pdf" target="_blank" class="btn-md disabled">Hire me</a>
-                <div class="disabled-text-container"></div>
-            </div>
-            <div class="showcase-img">
-                <img src="images/izan.jpg" />
+            <div class="showcase-content">
+                <div class="showcase-text">
+                    <div class="text-1">Hello, my name is</div>
+                    <div class="text-2">Izan Khan</div>
+                    <div class="text-3">And I'm a <span class="typing-1"></span></div>
+                    <a id="hireButton" href="documents/Izan_Khan_Resume_R1 .pdf" target="_blank" class="btn-md disabled">Hire me</a>
+                    <div class="disabled-text-container"></div>
+                </div>
+                <div class="showcase-img">
+                    <img src="images/izan.jpg" />
+                </div>
             </div>
         </div>
     </div>
@@ -369,11 +351,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script src="app.js"></script>
-    <!--<script>
-        $(window).on("load", function () {
-            $("loader-wrapper").fadeOut("slow");
-        });
-    </script>-->
+    <script src="scripts/app.js"></script>
 </body>
 </html>
