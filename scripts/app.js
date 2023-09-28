@@ -196,12 +196,4 @@ function drawMatrixRain() {
 // Call the drawMatrixRain function repeatedly with a delay of 35 milliseconds
 setInterval(drawMatrixRain, 35);
 
-function updateShowcaseHeight() {
-    const viewportHeight = window.innerHeight;
-    document.querySelector('.showcase').style.height = viewportHeight + 'px';
-}
-
-// Call the function when the page loads and when it's resized
-window.addEventListener('load', updateShowcaseHeight);
-window.addEventListener('resize', updateShowcaseHeight);
 
