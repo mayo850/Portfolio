@@ -149,8 +149,9 @@ const canvas = document.getElementById("backgroundShow");
 const ctx = canvas.getContext("2d");
 
 // Make the canvas full screen
-canvas.height = window.innerHeight;
-canvas.width = window.innerWidth;
+// Make the canvas full screen
+canvas.height = window.outerHeight;
+canvas.width = window.outerWidth;
 
 // Define the characters to be used for the matrix rain effect
 const matrixCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|`]}";
