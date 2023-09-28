@@ -196,25 +196,12 @@ function drawMatrixRain() {
 // Call the drawMatrixRain function repeatedly with a delay of 35 milliseconds
 setInterval(drawMatrixRain, 35);
 
-
-
-// Get the showcase element
-const showcase = document.querySelector('.showcase');
-
-// Function to update the showcase element's class based on viewport height
 function updateShowcaseHeight() {
     const viewportHeight = window.innerHeight;
-    const contentHeight = showcase.clientHeight;
-
-    // If the content height is less than the viewport height, add the 'full-viewport' class
-    if (contentHeight < viewportHeight) {
-        showcase.classList.add('full-viewport');
-    } else {
-        // Otherwise, remove the class
-        showcase.classList.remove('full-viewport');
-    }
+    document.querySelector('.showcase').style.height = viewportHeight + 'px';
 }
 
 // Call the function when the page loads and when it's resized
 window.addEventListener('load', updateShowcaseHeight);
 window.addEventListener('resize', updateShowcaseHeight);
+
