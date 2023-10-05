@@ -1,3 +1,60 @@
+//==========================================================//
+//                For MATRIX BACKGROUND                     //
+//==========================================================//
+
+// Get the canvas element and its 2D rendering context
+const canvas = document.getElementById("backgroundShow");
+const ctx = canvas.getContext("2d");
+
+// Make the canvas full screen
+// Make the canvas full screen
+canvas.height = window.outerHeight;
+canvas.width = window.outerWidth;
+
+// Define the characters to be used for the matrix rain effect
+const matrixCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|`]}";
+const charactersArray = matrixCharacters.split(""); // Convert the string to an array of characters
+
+const fontSize = 10;
+const columns = canvas.width / fontSize; // Number of columns for the rain
+const drops = []; // An array to store the Y-coordinate of each drop
+
+// Initialize the Y-coordinates of the drops
+for (let x = 0; x < columns; x++) {
+    drops[x] = 1;
+}
+
+// Function to draw the matrix rain
+function drawMatrixRain() {
+    // Set the background with low opacity to create a trail effect
+    ctx.fillStyle = "rgba(0, 0, 0, 0.04)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.fillStyle = "#2596be"; // Gray text color
+    ctx.font = `${fontSize}px Arial`;
+
+    // Loop over each column
+    for (let i = 0; i < drops.length; i++) {
+        // Select a random character from the matrixCharacters array
+        const character = charactersArray[Math.floor(Math.random() * charactersArray.length)];
+
+        // Draw the character at the current position
+        ctx.fillText(character, i * fontSize, drops[i] * fontSize);
+
+        // Reset the drop to the top of the canvas with some randomness
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+            drops[i] = 0;
+        }
+
+        // Increment the Y-coordinate for the next frame
+        drops[i]++;
+    }
+}
+
+// Call the drawMatrixRain function repeatedly with a delay of 35 milliseconds
+setInterval(drawMatrixRain, 35);
+
+
 // Navbar Sticky Behavior
 $(document).ready(function () {
     $(window).scroll(function () {
@@ -140,60 +197,4 @@ toggleElements();
 // Attach the toggleElements function to the window's resize event to handle dynamic resizing
 window.addEventListener('resize', toggleElements);
 
-  //==========================================================//
- //                For MATRIX BACKGROUND                     //
-//==========================================================//
-
-// Get the canvas element and its 2D rendering context
-const canvas = document.getElementById("backgroundShow");
-const ctx = canvas.getContext("2d");
-
-// Make the canvas full screen
-// Make the canvas full screen
-canvas.height = window.outerHeight;
-canvas.width = window.outerWidth;
-
-// Define the characters to be used for the matrix rain effect
-const matrixCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|`]}";
-const charactersArray = matrixCharacters.split(""); // Convert the string to an array of characters
-
-const fontSize = 10;
-const columns = canvas.width / fontSize; // Number of columns for the rain
-const drops = []; // An array to store the Y-coordinate of each drop
-
-// Initialize the Y-coordinates of the drops
-for (let x = 0; x < columns; x++) {
-    drops[x] = 1;
-}
-
-// Function to draw the matrix rain
-function drawMatrixRain() {
-    // Set the background with low opacity to create a trail effect
-    ctx.fillStyle = "rgba(0, 0, 0, 0.04)";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-    ctx.fillStyle = "#2596be"; // Gray text color
-    ctx.font = `${fontSize}px Arial`;
-
-    // Loop over each column
-    for (let i = 0; i < drops.length; i++) {
-        // Select a random character from the matrixCharacters array
-        const character = charactersArray[Math.floor(Math.random() * charactersArray.length)];
-
-        // Draw the character at the current position
-        ctx.fillText(character, i * fontSize, drops[i] * fontSize);
-
-        // Reset the drop to the top of the canvas with some randomness
-        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-            drops[i] = 0;
-        }
-
-        // Increment the Y-coordinate for the next frame
-        drops[i]++;
-    }
-}
-
-// Call the drawMatrixRain function repeatedly with a delay of 35 milliseconds
-setInterval(drawMatrixRain, 35);
-
-
+ 
