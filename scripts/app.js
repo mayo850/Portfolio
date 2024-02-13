@@ -1,3 +1,4 @@
+
 //==========================================================//
 //                For MATRIX BACKGROUND                     //
 //==========================================================//
@@ -6,10 +7,15 @@
 const canvas = document.getElementById("backgroundShow");
 const ctx = canvas.getContext("2d");
 
-// Make the canvas full screen
-// Make the canvas full screen
-canvas.height = window.outerHeight;
-canvas.width = window.outerWidth;
+// Get the device pixel ratio, falling back to 1 if it's not available
+const devicePixelRatio = window.devicePixelRatio || 1;
+
+// Set the canvas dimensions to match the screen's pixel ratio
+canvas.width = window.innerWidth * devicePixelRatio;
+canvas.height = window.innerHeight * devicePixelRatio;
+
+// Scale the context by the device pixel ratio to account for higher DPI displays
+ctx.scale(devicePixelRatio, devicePixelRatio);
 
 // Define the characters to be used for the matrix rain effect
 const matrixCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|`]}";
@@ -30,7 +36,7 @@ function drawMatrixRain() {
     ctx.fillStyle = "rgba(0, 0, 0, 0.04)";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    ctx.fillStyle = "#2596be"; // Gray text color
+    ctx.fillStyle = "#2596be"; 
     ctx.font = `${fontSize}px Arial`;
 
     // Loop over each column
