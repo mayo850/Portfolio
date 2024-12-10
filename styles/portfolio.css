@@ -831,7 +831,7 @@ section {
 
 
 /* Apply styles for iPhones with a screen width between 320px and 414px (iPhone 5 to iPhone 11 Pro Max) */
-@media only screen and (min-width: 320px) and (max-width: 768px) {
+@media only screen and (min-width: 320px) and (max-width: 414px) {
     .header h1 {
         font-size: 40px;
     }
