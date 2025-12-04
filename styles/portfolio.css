@@ -302,7 +302,7 @@ html {
 
 /* Make the SVG element responsive */
 .certifications {
-    height: 300px;
+    min-height: 300px;
 }
 
 .mobile {
@@ -859,3 +859,4 @@ section {
     /* Adjust fonts, margins, and sizes as needed for iPhones */
     /* You can target specific sections and elements to fine-tune the styles */
 }
+
