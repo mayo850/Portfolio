@@ -365,7 +365,7 @@ html {
 
 /* Make the SVG element responsive */
 .certifications {
-    height: 300px;
+    min-height: 300px;
     cursor:pointer;
 }
 
@@ -2194,3 +2194,4 @@ section {
     transform: rotate(45deg);
     right: 39.2%;
 }
+
