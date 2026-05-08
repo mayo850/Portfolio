@@ -1014,4 +1014,8 @@ p {
     align-items: flex-start;
     flex-direction: column;
   }
+
+    .scanline-card {
+        margin-bottom: 12px;
+    }
 }
